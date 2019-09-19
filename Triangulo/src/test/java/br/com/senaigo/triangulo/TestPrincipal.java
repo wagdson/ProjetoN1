@@ -26,11 +26,10 @@ public class TestPrincipal extends TestCase {
 	String dtprinci = principal.getHorario();
 	String dat = d.format(date);
 	
-	Date data1 = (Date)d.parse(dtprinci);
-	Date data2 = (Date)d.parse(dat);
+	Date data1 = d.parse(dtprinci);
+	Date data2 = d.parse(principal.getHorario());
 
 	assertTrue(data1.getTime() <= (data2.getTime()+100) && data1.getTime() >= (data2.getTime()-100) );
-		
 	}
 
 }
